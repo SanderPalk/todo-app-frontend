@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("./media/font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf");
+}
+
+:root {
+    --dark-background-color: hsl(235, 21%, 11%);
+    --dark-text-color: hsl(234, 39%, 85%);
+    --dark-background-image: url(./media/images/bg-desktop-dark.jpg);
+    --dark-input-background: hsl(235, 24%, 19%);
+
+    --light-background-color: hsl(0, 0%, 98%);
+    --light-text-color: hsl(235, 19%, 35%);
+    --light-background-image: url(./media/images/bg-desktop-light.jpg);
+    --light-input-background: hsl(236, 33%, 92%);
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+.App {
+    margin: 0 auto;
+    width: 1440px;
+    height: 1080px;
+    background-repeat: no-repeat;
+}
+
+.App.light-mode {
+    color: var(--light-text-color);
+    background-color: var(--light-background-color);
+    background-image: var(--light-background-image);
+}
+
+.App.dark-mode {
+    color: var(--dark-text-color);
+    background-color: var(--dark-background-color);
+    background-image: var(--dark-background-image);
+}
+
+.header {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+
+h1 {
+    color: aliceblue;
+    letter-spacing: 3px;
+}
+
+.toggle-button {
+    content: url("media/images/icon-sun.svg");
+}
+
+.toggle-button-light {
+    content: url("media/images/icon-moon.svg");
+}
+
+.input-box {
+    background-color: var(--dark-input-background);
+    width: 45%;
+    margin: 1em auto 0.5em;
+    padding: 20px 0 20px 0;
+    border-radius: 3px;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-box.light-box {
+    background-color: var(--light-input-background);
+}
+
+input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    margin-left: 5%;
+    color: var(--dark-text-color);
+    width: 70%;
+}
+
+input.input-light {
+    color: var(--light-text-color);
+}
+
+button {
+    margin-right: 5%;
+    border: none;
+    border-radius: 8px;
+    background-color: hsl(234, 39%, 85%);
+    outline: none;
+    padding: 5px;
+}
+
+.todo-list-container {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.todo-item-container {
+    background-color: var(--dark-input-background);
+    width: 45%;
+    padding: 20px 0 20px 0;
+    border-radius: 1px;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--light-text-color);
+}
+
+.todo-item-container.light-container {
+    background-color: var(--light-input-background);
+}
+
+.todo-content-container {
+    margin-left: 5%;
+}
+
+.todo-content-container.checked {
+    color: var(--light-text-color);
+}
+
+.todo-content-container.light-checked {
+    color: var(--dark-text-color);
+}
+
+.checkbox {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid var(--light-text-color);
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s;
+    margin-left: 50%;
+}
+
+.checkbox.checked {
+    background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+
+
+img.icon-checked {
+    content: url("./media/images/icon-check.svg");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p {
+    margin: 0;
+}
+
+p.checked {
+    text-decoration-line: line-through;
+}
+
+.todo-item-container.footer {
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.list-counter-container {
+    margin-left: 5%;
+}
+
+.list-filter-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.list-filter-container button, .delete-button {
+    border: 0;
+    background-color: transparent;
+    color: var(--dark-text-color);
+    cursor: pointer;
+    margin: 0 auto;
+    font-weight: bolder;
+}
+
+.list-filter-container button.light-filter, .delete-button.light-filter {
+    color: var(--light-text-color);
+}
+
+.clear-completed-container {
+    margin-right: 5%;
+}
